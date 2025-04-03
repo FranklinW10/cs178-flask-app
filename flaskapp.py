@@ -49,14 +49,14 @@ def delete_user():
         
         # Process the data (e.g., add it to a database)
         # For now, let's just print it to the console
-        print("Name:", name, ":")
+        print("Name:", name)
         
-        flash('User deleted successfully!', 'hurrah')  # 'success' is a category; makes a green banner at the top
+        flash('User deleted successfully!', 'warning')  # 'success' is a category; makes a green banner at the top
         # Redirect to home page or another page upon successful submission
         return redirect(url_for('home'))
     else:
         # Render the form page if the request method is GET
-        return render_template('add_user.html')
+        return render_template('delete_user.html')
 
 # these two lines of code should always be the last in the file
 if __name__ == '__main__':
